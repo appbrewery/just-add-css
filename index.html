@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head id="head">
+  <title>Example HTML Website</title>
+</head>
+
+<body>
+  <header>
+    <h1>My Website</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>Welcome to My Website</h2>
+    <p>This is a simple website.</p>
+    <button onclick="addCSS()" id="button">Toggle CSS</button>
+
+  </main>
+  <footer>
+    <p>Copyright © App Brewery</p>
+  </footer>
+  <script>
+    let counter = 0
+    function addCSS() {
+      counter++
+      if (counter % 2 !== 0) {
+        document.getElementById("head").innerHTML = '  <title>Example HTML Website</title> \n<link rel="stylesheet" href="./styles.css" />'
+      } else {
+
+        document.getElementById("head").innerHTML = '  <title>Example HTML Website</title> '
+
+      }
+    }
+  </script>
+</body>
+
+</html>
